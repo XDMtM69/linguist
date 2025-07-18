@@ -177,7 +177,7 @@ class TestGrammars < Minitest::Test
       "mit"
     elsif content.include?("This package is provided as-is and is placed in the Public Domain")
       "public"
-    elsif content.include?("http://www.wtfpl.net/txt/copying/")
+    elsif (uri = URI.extract(content).find { |u| URI(u).host == "www.wtfpl.net" && URI(u).path == "/txt/copying/" })
       "wtfpl"
     elsif content.include?("zlib") && content.include?("license") && content.include?("2. Altered source versions must be plainly marked as such")
       "zlib"

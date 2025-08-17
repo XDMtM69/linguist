@@ -68,7 +68,7 @@
         },
         {
             "name": "twig/twig",
-            "version": "1.44.7",
+            "version": "3.11.2"
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
